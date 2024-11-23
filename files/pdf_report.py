@@ -19,7 +19,7 @@ class PDFReport:
 
         # Insert title
         pdf.set_font(family='Times', size=24, style='B')
-        pdf.cell(w=0, h=80, txt='Flatmates Bill', border=1, align='C', ln=1)
+        pdf.cell(w=0, h=80, txt='Flatmates Bill', border=0, align='C', ln=1)
 
         # Insert Period label and Value
         pdf.set_font(family='Times', size=14, style='B')
