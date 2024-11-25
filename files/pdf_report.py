@@ -1,3 +1,6 @@
+import webbrowser
+import os
+
 from fpdf import FPDF
 
 
@@ -36,3 +39,5 @@ class PDFReport:
         pdf.cell(w=150, h=40, txt=str(round(flatmate2.pays(bill=bill, flatmate2=flatmate1), 2)), border=0, ln=1)
 
         pdf.output(self.filename)
+
+        webbrowser.open('file://' + os.path.realpath(self.filename))
