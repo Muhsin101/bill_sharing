@@ -38,6 +38,8 @@ class PDFReport:
         pdf.cell(w=100, h=40, txt=flatmate2.name, border=0)
         pdf.cell(w=150, h=40, txt=str(round(flatmate2.pays(bill=bill, flatmate2=flatmate1), 2)), border=0, ln=1)
 
-        pdf.output(f"reports/{self.filename}")
-
-        webbrowser.open('file://' + os.path.realpath(f"reports/{self.filename}"))
+        # Change directory to reports
+        # Save report
+        os.chdir("../reports")
+        pdf.output(self.filename)
+        webbrowser.open('file://' + os.path.realpath(self.filename))
