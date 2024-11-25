@@ -17,5 +17,5 @@ flatmate2 = Flatmate(name2, days_in_house2)
 print(f"{name1} pays: £{round(flatmate1.pays(bill, flatmate2), 2)}")
 print(f"{name2} pays: £{round(flatmate2.pays(bill, flatmate1), 2)}")
 
-pdf_report = PDFReport(filename="Report1.pdf")
+pdf_report = PDFReport(filename=f"{bill_name}{bill.period}.pdf")
 pdf_report.generate(flatmate1, flatmate2, bill)
